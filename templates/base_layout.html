@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article List</title>
+    <link rel=stylesheet href="{% static 'styles.css' %}" </head>
+
+<body>
+    <div id=container>
+        <div id=header>
+            <h1>List of Articles</h1>
+        </div>
+
+        <div id=nav>
+            <h3>Navigation</h3>
+                <ul>
+                    <li><a href=homepage class="links">Home</a></li>
+                    <li><a href=about class="links">About</a></li>
+                    <li><a href=contact class="links">Contact</a></li>
+                </ul>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <div id=footer>
+            <p>Made by Andrew Wiebe</p>
+        </div>
+
+    </div>
+</body>
+
+</html>
