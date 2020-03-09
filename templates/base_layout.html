@@ -18,9 +18,11 @@
         <div id=nav>
             <h3>Navigation</h3>
                 <ul>
-                    <li><a href=homepage class="links">Home</a></li>
-                    <li><a href=about class="links">About</a></li>
-                    <li><a href=contact class="links">Contact</a></li>
+                    <li><a href=/ class="links">Home</a></li>
+                    <li><a href="{% url 'articles:articles_list' %}" class="links">Articles</a></li>
+                    <li><a href=/about class="links">About</a></li>
+                    <li><a href=/contact class="links">Contact</a></li>
+                    <li><a href="{% url 'b2caudit:getAuditLog' %}" class="links">B2C Audit</a></li>
                 </ul>
         </div>
 

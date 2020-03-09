@@ -5,6 +5,10 @@ body{
     color: black;
 }
 
+h2{
+    color: black;
+}
+
 #container{
     background-color: whitesmoke;
     width: 800px;
