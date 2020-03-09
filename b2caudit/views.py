@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import requests
 import json
 
-def getToken(self):
+def getToken(request):
     url = 'https://login.microsoftonline.com/ssopb2cseneca.onmicrosoft.com/oauth2/token?api-version=1.0'
     body = {
         'grant_type': 'client_credentials',
@@ -17,7 +17,9 @@ def getToken(self):
     #oauthToken = response_native.get('access_token')
     token_type = json.loads(resp.text).get('token_type')
     access_token = json.loads(resp.text).get('access_token')
-    return HttpResponse(token_type + ' ' + access_token)
+    #return HttpResponse(token_type + ' ' + access_token)
+    token = {token_type: json.loads(resp.text).get('token_type'), access_token: json.loads(resp.text).get('access_token')  }
+    return render(request, 'showToken.html', {'access_token': access_token})
 
 def getAuditLog(self):
     return HttpResponse('GetAuditLog Here')

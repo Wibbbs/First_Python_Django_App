@@ -38,6 +38,7 @@ h2{
     float: right;
     width: 600px;
     color:grey;
+    word-wrap: break-word;
 }
 
 a {
