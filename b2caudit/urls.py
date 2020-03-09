@@ -5,5 +5,6 @@ from . import views
 app_name = 'b2caudit'
 
 urlpatterns = [
-    path('', views.getAuditLog, name='getAuditLog'),
+    path('getToken', views.getToken, name='getToken'),
+    path('getAuditLog', views.getAuditLog, name='getAuditLog'),
 ]
